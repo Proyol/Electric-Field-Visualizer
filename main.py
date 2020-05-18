@@ -41,6 +41,19 @@ size_box.place(x=10, y=10)
 submit = tk.Button(root, text="Enviar", width=10, command=draw_grid)
 submit.place(x=10, y=40)
 
+#funcoes do console
+def add_particle():
+    print(console.get())
+
+# console
+console_title= Label(root,text="Console",bg="black",fg="white")
+console_title.place(x=10,y=550)
+console = tk.StringVar()
+console_box = tk.Entry(root,justify=LEFT,width=40 ,bg="gray",fg="white",bd=0,textvariable=console)
+console_box.place(x=10,y=570)
+console_button = tk.Button(root,text="Enviar",width=5,bd=0,command=add_particle)
+console_button.place(x=350, y=570)
+ 
 
 # adicionar as cargas na tela
 def insert_pos(event):
